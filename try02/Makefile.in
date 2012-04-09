@@ -9,3 +9,10 @@ Makefile: Makefile.in config.status
 
 config.status: configure
 	./config.status --recheck
+
+clean:
+	-rm -rf autom4te.cache build
+	-rm configure config.* Makefile
+	-rm helloworld
+
+.PHONY: clean
